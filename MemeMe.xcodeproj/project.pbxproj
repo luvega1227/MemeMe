@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		787F526E1E312AEF006ED7FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F526D1E312AEF006ED7FD /* AppDelegate.swift */; };
-		787F52701E312AEF006ED7FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F526F1E312AEF006ED7FD /* ViewController.swift */; };
+		787F52701E312AEF006ED7FD /* MemeEditorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F526F1E312AEF006ED7FD /* MemeEditorVC.swift */; };
 		787F52731E312AEF006ED7FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787F52711E312AEF006ED7FD /* Main.storyboard */; };
 		787F52751E312AEF006ED7FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 787F52741E312AEF006ED7FD /* Assets.xcassets */; };
 		787F52781E312AEF006ED7FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 787F52761E312AEF006ED7FD /* LaunchScreen.storyboard */; };
 		787F52831E312AEF006ED7FD /* MemeMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F52821E312AEF006ED7FD /* MemeMeTests.swift */; };
 		787F528E1E312AEF006ED7FD /* MemeMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F528D1E312AEF006ED7FD /* MemeMeUITests.swift */; };
+		787F529C1E314887006ED7FD /* MemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F529B1E314887006ED7FD /* MemeModel.swift */; };
+		787F529E1E3148AE006ED7FD /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F529D1E3148AE006ED7FD /* MemeTextField.swift */; };
+		787F52A01E3148CB006ED7FD /* MemeUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 787F529F1E3148CB006ED7FD /* MemeUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		787F526A1E312AEF006ED7FD /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		787F526D1E312AEF006ED7FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		787F526F1E312AEF006ED7FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		787F526F1E312AEF006ED7FD /* MemeEditorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeEditorVC.swift; sourceTree = "<group>"; };
 		787F52721E312AEF006ED7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		787F52741E312AEF006ED7FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		787F52771E312AEF006ED7FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		787F52891E312AEF006ED7FD /* MemeMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemeMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		787F528D1E312AEF006ED7FD /* MemeMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeMeUITests.swift; sourceTree = "<group>"; };
 		787F528F1E312AEF006ED7FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		787F529B1E314887006ED7FD /* MemeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeModel.swift; sourceTree = "<group>"; };
+		787F529D1E3148AE006ED7FD /* MemeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
+		787F529F1E3148CB006ED7FD /* MemeUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				787F526D1E312AEF006ED7FD /* AppDelegate.swift */,
-				787F526F1E312AEF006ED7FD /* ViewController.swift */,
+				787F526F1E312AEF006ED7FD /* MemeEditorVC.swift */,
+				787F529B1E314887006ED7FD /* MemeModel.swift */,
+				787F529D1E3148AE006ED7FD /* MemeTextField.swift */,
+				787F529F1E3148CB006ED7FD /* MemeUtils.swift */,
 				787F52711E312AEF006ED7FD /* Main.storyboard */,
 				787F52741E312AEF006ED7FD /* Assets.xcassets */,
 				787F52761E312AEF006ED7FD /* LaunchScreen.storyboard */,
@@ -262,8 +271,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				787F52701E312AEF006ED7FD /* ViewController.swift in Sources */,
+				787F52701E312AEF006ED7FD /* MemeEditorVC.swift in Sources */,
+				787F52A01E3148CB006ED7FD /* MemeUtils.swift in Sources */,
+				787F529C1E314887006ED7FD /* MemeModel.swift in Sources */,
 				787F526E1E312AEF006ED7FD /* AppDelegate.swift in Sources */,
+				787F529E1E3148AE006ED7FD /* MemeTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,6 +526,7 @@
 				787F52941E312AEF006ED7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		787F52951E312AEF006ED7FD /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +535,7 @@
 				787F52971E312AEF006ED7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		787F52981E312AEF006ED7FD /* Build configuration list for PBXNativeTarget "MemeMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +544,7 @@
 				787F529A1E312AEF006ED7FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
