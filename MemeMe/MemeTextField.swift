@@ -11,10 +11,10 @@ import UIKit
 class MemeTextField: UITextField {
     
     let memeTextAttributes:[String:Any] = [
-        NSStrokeColorAttributeName: UIColor.black,
-        NSForegroundColorAttributeName: UIColor.white,
-        NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: -5,
+        NSAttributedStringKey.strokeColor.rawValue: UIColor.black,
+        NSAttributedStringKey.foregroundColor.rawValue: UIColor.white,
+        NSAttributedStringKey.font.rawValue: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+        NSAttributedStringKey.strokeWidth.rawValue: -5,
         ]
     
     var isPristine = true

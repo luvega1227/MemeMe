@@ -128,14 +128,14 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    func keyboardWillShow(_ notification:Notification) {
+    @objc func keyboardWillShow(_ notification:Notification) {
         //Only makes the UI to go up when edditing the bottom text
         if lowerTextView.isEditing {
             view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
-    func keyboardWillHide(_ notification:Notification) {
+    @objc func keyboardWillHide(_ notification:Notification) {
         view.frame.origin.y = 0
     }
     
